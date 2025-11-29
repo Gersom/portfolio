@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gersom Alaja - Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Animated Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed w-full top-0 px-6 z-50">
+    <div class="max-w-6xl mx-auto py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold gradient-text">G</h1>
+      <div class="hidden md:flex gap-8">
+        <a href="#projects" class="hover:text-[var(--accent)] transition-colors">Proyectos</a>
+        <a href="#about" class="hover:text-[var(--accent)] transition-colors">Sobre mí</a>
+        <a href="#experience" class="hover:text-[var(--accent)] transition-colors">Experiencia</a>
+        <a href="#contact" class="hover:text-[var(--accent)] transition-colors">Contacto</a>
+      </div>
+      <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-[var(--secondary)] z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="flex flex-col gap-6 p-8 mt-16">
+      <a href="#projects" class="text-lg hover:text-[var(--accent)] transition-colors">Proyectos</a>
+      <a href="#about" class="text-lg hover:text-[var(--accent)] transition-colors">Sobre mí</a>
+      <a href="#experience" class="text-lg hover:text-[var(--accent)] transition-colors">Experiencia</a>
+      <a href="#contact" class="text-lg hover:text-[var(--accent)] transition-colors">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="max-w-6xl w-full mx-auto z-10">
+      <div class="fade-in delay-1">
+        <p class="text-lg text-[var(--accent)] mb-4">Hola.</p>
+      </div>
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 fade-in delay-2">
+        Gersom <span class="gradient-text">Alaja</span>
+      </h1>
+      <h2 class="text-3xl md:text-5xl font-semibold text-[var(--text-dim)] mb-8 fade-in delay-3">
+        Fullstack Developer
+      </h2>
+      <p class="text-xl text-[var(--text-dim)] max-w-2xl mb-12 fade-in delay-4">
+        Desarrollador especializado en Frontend con React y Vue, con más de 10 años de experiencia creando experiencias web excepcionales.
+      </p>
+      <div class="flex flex-wrap gap-4 fade-in delay-5">
+        <a href="#projects" class="btn-primary">Ver Proyectos</a>
+        <a href="https://github.com/Gersom" target="_blank" class="btn-primary" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">GitHub</a>
+        <a href="https://linkedin.com/in/gersomalaja" target="_blank" class="btn-primary" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="relative py-32 px-6 bg-[var(--secondary)]">
+    <div class="max-w-6xl mx-auto z-10">
+      <h2 class="section-title gradient-text fade-in">Proyectos Destacados</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 - Portal Kayku -->
+        <div class="glass-card p-6 fade-in delay-1">
+          <div class="mb-4">
+            <span class="text-sm text-[var(--accent)]">Portal Privado</span>
+            <h3 class="text-2xl font-bold mt-2 mb-3">Portal Kayku</h3>
+          </div>
+          <p class="text-[var(--text-dim)] mb-4">
+            Portal privado para trabajadores de Sodexo que brinda capacitaciones y certificados. Desarrollado con Vue.js y Tailwind CSS.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-pill text-xs">Vue.js</span>
+            <span class="tech-pill text-xs">Tailwind CSS</span>
+          </div>
+          <a href="https://portalkayku.sodexoapp.pe/" target="_blank" class="project-link">Ver Proyecto →</a>
+        </div>
+
+        <!-- Project 2 - Holisteek -->
+        <div class="glass-card p-6 fade-in delay-2">
+          <div class="mb-4">
+            <span class="text-sm text-[var(--accent)]">Web App & Admin Panel</span>
+            <h3 class="text-2xl font-bold mt-2 mb-3">Holisteek</h3>
+          </div>
+          <p class="text-[var(--text-dim)] mb-4">
+            Plataforma para buscar establecimientos y eventos en tu ciudad. Incluye panel de administración completo. Desarrollado con Next.js, React y Tailwind CSS.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-pill text-xs">Next.js</span>
+            <span class="tech-pill text-xs">React</span>
+            <span class="tech-pill text-xs">Tailwind CSS</span>
+          </div>
+          <a href="https://holisteek.com" target="_blank" class="project-link">Ver Proyecto →</a>
+        </div>
+
+        <!-- Project 3 - WWF Peru -->
+        <div class="glass-card p-6 fade-in delay-3">
+          <div class="mb-4">
+            <span class="text-sm text-[var(--accent)]">ONG · En Desarrollo</span>
+            <h3 class="text-2xl font-bold mt-2 mb-3">WWF Perú</h3>
+          </div>
+          <p class="text-[var(--text-dim)] mb-4">
+            Plataforma de ONG para salvaguardar animales en peligro de extinción. Incluye sistema de adopciones simbólicas. React con CSS Modules.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-pill text-xs">React</span>
+            <span class="tech-pill text-xs">CSS Modules</span>
+          </div>
+          <a href="https://wwf-frontend-ssr.azurewebsites.net" target="_blank" class="project-link">Ver Proyecto →</a>
+        </div>
+
+        <!-- Project 4 - Pet Care Platform -->
+        <div class="glass-card p-6 fade-in delay-4">
+          <div class="mb-4">
+            <span class="text-sm text-[var(--accent)]">Plataforma Web</span>
+            <h3 class="text-2xl font-bold mt-2 mb-3">Pet Care Platform</h3>
+          </div>
+          <p class="text-[var(--text-dim)] mb-4">
+            Plataforma para encontrar cuidadores de mascotas. Integración con PayPal, chat privado, panel de admin con estadísticas y confirmación por email.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-pill text-xs">React</span>
+            <span class="tech-pill text-xs">PayPal API</span>
+            <span class="tech-pill text-xs">Real-time Chat</span>
+          </div>
+        </div>
+
+        <!-- Project 5 - INACEX -->
+        <div class="glass-card p-6 fade-in delay-5">
+          <div class="mb-4">
+            <span class="text-sm text-[var(--accent)]">Corporate Website</span>
+            <h3 class="text-2xl font-bold mt-2 mb-3">INACEX</h3>
+          </div>
+          <p class="text-[var(--text-dim)] mb-4">
+            Sitio web corporativo desarrollado con Vue.js, enfocado en experiencia de usuario y diseño moderno.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-pill text-xs">Vue.js</span>
+          </div>
+          <a href="https://inacex.cl/" target="_blank" class="project-link">Ver Proyecto →</a>
+        </div>
+
+        <!-- Project 6 - EEinmobiliaria -->
+        <div class="glass-card p-6 fade-in delay-6">
+          <div class="mb-4">
+            <span class="text-sm text-[var(--accent)]">Real Estate</span>
+            <h3 class="text-2xl font-bold mt-2 mb-3">EEinmobiliaria</h3>
+          </div>
+          <p class="text-[var(--text-dim)] mb-4">
+            Plataforma inmobiliaria desarrollada con React.js, con diseño intuitivo y funcionalidades avanzadas de búsqueda.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-pill text-xs">React.js</span>
+          </div>
+          <a href="https://eeinmobiliaria.com/" target="_blank" class="project-link">Ver Proyecto →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-32 px-6">
+    <div class="max-w-6xl mx-auto z-10">
+      <h2 class="section-title gradient-text fade-in">Sobre mí</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="fade-in delay-2">
+          <p class="text-lg text-[var(--text-dim)] mb-6">
+            Comencé mi carrera profesional estudiando en un instituto donde me gradué como Técnico en Informática. Actualmente soy un apasionado Programador Fullstack con enfoque en el diseño Front-end con más de 10 años de experiencia en el fascinante mundo de la programación.
+          </p>
+          <p class="text-lg text-[var(--text-dim)]">
+            Me especializo en crear interfaces de usuario intuitivas y atractivas, con un fuerte enfoque en la experiencia del usuario y las mejores prácticas de desarrollo.
+          </p>
+        </div>
+        <div class="fade-in delay-3">
+          <h3 class="text-2xl font-bold mb-6 text-[var(--accent)]">Tech Stack</h3>
+          <div class="flex flex-wrap">
+            <span class="tech-pill">React.js</span>
+            <span class="tech-pill">Vue.js</span>
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">CSS Modules</span>
+            <span class="tech-pill">Styled Components</span>
+            <span class="tech-pill">Stylus</span>
+            <span class="tech-pill">SASS</span>
+            <span class="tech-pill">React Native</span>
+            <span class="tech-pill">Figma</span>
+            <span class="tech-pill">Git</span>
+            <span class="tech-pill">Agile/Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="relative py-32 px-6">
+    <div class="max-w-6xl mx-auto z-10">
+      <h2 class="section-title gradient-text fade-in">Experiencia</h2>
+      
+      <div class="space-y-12">
+        <!-- Experience Item 1 -->
+        <div class="glass-card p-8 fade-in delay-1">
+          <div class="timeline-item">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold text-[var(--accent)] mb-2">Director de TI</h3>
+                <p class="text-xl text-[var(--text-dim)]">Estudio Contable Salamanca</p>
+              </div>
+              <span class="text-[var(--text-dim)] mt-2 md:mt-0">Oct 2023 - Dic 2023</span>
+            </div>
+            <ul class="list-disc list-inside text-[var(--text-dim)] space-y-2">
+              <li>Lideré un equipo de 5 personas en el desarrollo de soluciones tecnológicas</li>
+              <li>Desarrollo de la página web del estudio y aplicativos internos</li>
+              <li>Implementación de herramientas de gestión como Discord y Trello</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="glass-card p-8 fade-in delay-2">
+          <div class="timeline-item">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold text-[var(--accent)] mb-2">Desarrollador Front-End</h3>
+                <p class="text-xl text-[var(--text-dim)]">Slonpay S.A.C.</p>
+              </div>
+              <span class="text-[var(--text-dim)] mt-2 md:mt-0">2021 - 2022</span>
+            </div>
+            <ul class="list-disc list-inside text-[var(--text-dim)] space-y-2">
+              <li>Desarrollo frontend y diseño en Figma de proyectos relacionados con criptomonedas</li>
+              <li>Desarrollo de CRYPTO BOT con React Native para manejo de inversiones</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Item 3 -->
+        <div class="glass-card p-8 fade-in delay-3">
+          <div class="timeline-item">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold text-[var(--accent)] mb-2">Desarrollador Front-End</h3>
+                <p class="text-xl text-[var(--text-dim)]">Staff Creativa</p>
+              </div>
+              <span class="text-[var(--text-dim)] mt-2 md:mt-0">2019 - 2020</span>
+            </div>
+            <ul class="list-disc list-inside text-[var(--text-dim)] space-y-2">
+              <li>Desarrollo frontend con React y Styled Components</li>
+              <li>Creación de interfaces modernas y responsivas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Item 4 -->
+        <div class="glass-card p-8 fade-in delay-4">
+          <div class="timeline-item">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-bold text-[var(--accent)] mb-2">Desarrollador Front-End</h3>
+                <p class="text-xl text-[var(--text-dim)]">Noveltie Company</p>
+              </div>
+              <span class="text-[var(--text-dim)] mt-2 md:mt-0">2015 - 2019</span>
+            </div>
+            <ul class="list-disc list-inside text-[var(--text-dim)] space-y-2">
+              <li>Desarrollo frontend con Vue.js, Stylus y SASS</li>
+              <li>Desarrollo de múltiples proyectos web para clientes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="relative py-32 px-6 bg-[var(--secondary)]">
+    <div class="max-w-6xl mx-auto z-10">
+      <h2 class="section-title gradient-text fade-in">Educación & Certificaciones</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 fade-in delay-1">
+          <h3 class="text-2xl font-bold text-[var(--accent)] mb-4">Educación</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-xl font-semibold">Bootcamp Fullstack Developer</h4>
+              <p class="text-[var(--text-dim)]">SOYHENRY - 2023</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold">Técnico en Informática</h4>
+              <p class="text-[var(--text-dim)]">Instituto de Educación Tecnológica</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-8 fade-in delay-2">
+          <h3 class="text-2xl font-bold text-[var(--accent)] mb-4">Certificaciones</h3>
+          <ul class="space-y-3 text-[var(--text-dim)]">
+            <li>• Curso de Programación Básica - Platzi</li>
+            <li>• Metodologías Ágiles SCRUM - EUREKA Perú</li>
+            <li>• Gestión de conocimiento I+D+I - Universidad de Tarapacá</li>
+            <li>• Programación Visual .NET con SQL Server</li>
+            <li>• Prototipado de Aplicaciones Web y Móviles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative py-32 px-6">
+    <div class="max-w-6xl mx-auto text-center z-10">
+      <h2 class="section-title gradient-text fade-in mx-auto">Contacto</h2>
+      <p class="text-xl text-[var(--text-dim)] mb-12 fade-in delay-2">
+        ¿Interesado en trabajar juntos? ¡Hablemos!
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-6 fade-in delay-3">
+        <a href="mailto:gersomalaja@gmail.com" class="btn-primary">
+          📧 Email
+        </a>
+        <a href="https://linkedin.com/in/gersomalaja" target="_blank" class="btn-primary" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">
+          💼 LinkedIn
+        </a>
+        <a href="https://github.com/Gersom" target="_blank" class="btn-primary" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">
+          💻 GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative py-8 px-6 border-t border-[rgba(0,217,255,0.1)]">
+    <div class="max-w-6xl mx-auto text-center text-[var(--text-dim)]">
+      <p>&copy; 2024 Gersom Alaja. Fullstack Developer.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
